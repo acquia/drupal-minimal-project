@@ -1,6 +1,6 @@
 {
   "name": "acquia/minimal-project",
-  "description": "Minimal Drupal application based ",
+  "description": "Minimal Acquia-compatible Drupal application based on the Drupal Recommended Project",
   "license": "GPL-2.0-or-later",
   "authors": [
     {

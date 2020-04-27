@@ -7,7 +7,7 @@ This is a project template providing a minimal Drupal 9 application. It is based
 
 Create a new project using Composer:
 
-`composer create-project acquia/minimal-project`
+`composer create-project --no-interaction acquia/minimal-project`
 
 # License
 
