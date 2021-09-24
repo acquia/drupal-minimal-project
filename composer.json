@@ -37,7 +37,6 @@
             "locations": {
                 "web-root": "docroot/"
             }
-
         },
         "enable-patching": true,
         "installer-paths": {
