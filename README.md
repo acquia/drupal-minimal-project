@@ -1,7 +1,11 @@
 Acquia Drupal Minimal Project
 ====
 
-This project template provides a minimal Drupal 9 application to be hosted on Acquia. It is based on the [Drupal Recommended Project](https://github.com/drupal/recommended-project/tree/9.0.x), with the principal difference being a relocated docroot for compatibility with Acquia hosting. It includes only essential dependencies and configuration to install and host Drupal 9 on Acquia.
+This project template provides a minimal Drupal 9 application to be hosted on Acquia. It includes only essential dependencies and configuration to install and host Drupal 9 on Acquia. It is based on the [Drupal Recommended Project](https://github.com/drupal/recommended-project/tree/9.3.x), with only a few modifications:
+
+- A relocated docroot for compatibility with Acquia hosting
+- The addition of Drush
+- The addition of Asset Packagist for compatibility with Lightning
 
 This project targets experienced developers who prefer to build a new application from the ground up. If you prefer a more complete out-of-the-box Drupal 9 experience on Acquia Cloud, consider trying the [Acquia Drupal Recommended Project](https://github.com/acquia/drupal-recommended-project) instead.
 
