@@ -42,10 +42,6 @@ jobs:
             php-version: "7.3"
             allow-failure: true
 
-          - orca-job: LOOSE_DEPRECATED_CODE_SCAN
-            php-version: "7.3"
-            allow-failure: true
-
           - orca-job: DEPRECATED_CODE_SCAN_W_CONTRIB
             php-version: "7.3"
             allow-failure: true
