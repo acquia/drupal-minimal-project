@@ -1,6 +1,10 @@
 ---
 name: ORCA CI
-on: [ push, pull_request ]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,10 +39,6 @@ jobs:
             allow-failure: false
 
           - orca-job: INTEGRATED_UPGRADE_TEST_TO_NEXT_MINOR_DEV
-            php-version: "7.3"
-            allow-failure: true
-
-          - orca-job: LOOSE_DEPRECATED_CODE_SCAN
             php-version: "7.3"
             allow-failure: true
 
