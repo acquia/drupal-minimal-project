@@ -33,9 +33,16 @@ jobs:
           - INTEGRATED_TEST_ON_NEXT_MINOR_DEV
           - ISOLATED_TEST_ON_NEXT_MINOR_DEV
           - INTEGRATED_UPGRADE_TEST_TO_NEXT_MINOR_DEV
+          # This is our custom job on 7.3
+          - ""
         php-version: [ "7.3" ]
         include:
           - orca-job: ISOLATED_TEST_ON_CURRENT
+            php-version: "8.0"
+          # These are our custom jobs to ensure composer install works
+          - orca-job: ""
+            php-version: "7.4"
+          - orca-job: ""
             php-version: "8.0"
     steps:
       - uses: actions/checkout@v2
@@ -55,6 +62,7 @@ jobs:
           curl https://patch-diff.githubusercontent.com/raw/acquia/orca/pull/176.patch | git -C ../orca apply
           composer install -d ../orca
           ../orca/bin/ci/before_install.sh
+          if [[ ! "$ORCA_JOB" ]]; then composer install; fi
 
       - name: Install
         run: ../orca/bin/ci/install.sh
