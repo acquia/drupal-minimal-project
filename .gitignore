@@ -14,3 +14,8 @@
 /docroot/profiles/contrib
 /docroot/themes/contrib
 /.editorconfig
+
+.DS_Store
+ .idea/
+ .php_cache
+ vendor/
