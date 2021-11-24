@@ -1,6 +1,5 @@
 CONTRIBUTING.md export-ignore
 .github export-ignore
-.gitattributes export-ignore
 /*.sh export-ignore
 /.acquia export-ignore
 /.gitattributes export-ignore
