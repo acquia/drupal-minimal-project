@@ -44,7 +44,9 @@
                 "type:drupal-core"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -65,6 +67,10 @@
                 "type:drupal-drush"
             ]
         },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "patchLevel": {
             "drupal/core": "-p2"
         },
