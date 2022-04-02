@@ -11,7 +11,7 @@ jobs:
     env:
       ORCA_SUT_NAME: acquia/drupal-minimal-project
       ORCA_SUT_BRANCH: master
-      ORCA_VERSION: dev-develop
+      ORCA_VERSION: ^3
       ORCA_JOB: ${{ matrix.orca-job }}
 
     strategy:
@@ -35,6 +35,8 @@ jobs:
           - INTEGRATED_UPGRADE_TEST_TO_NEXT_MINOR_DEV
           # This is our custom job on 7.4
           - ""
+          # We do not run deprecated code scans since they'd scan the entire
+          # codebase (since the SUT is the project template).
         php-version: [ "7.4" ]
         include:
           - orca-job: ISOLATED_TEST_ON_CURRENT
@@ -79,3 +81,11 @@ jobs:
       - name: After failure
         if: ${{ failure() }}
         run: ../orca/bin/ci/after_failure.sh
+
+  all-successful:
+    # https://github.community/t/is-it-possible-to-require-all-github-actions-tasks-to-pass-without-enumerating-them/117957/4?u=graingert
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    - name: note that all tests succeeded
+      run: echo "🎉"
