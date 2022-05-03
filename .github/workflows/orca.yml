@@ -40,6 +40,8 @@ jobs:
         php-version: [ "7.4" ]
         include:
           - orca-job: ISOLATED_TEST_ON_CURRENT
+            php-version: "8.1"
+          - orca-job: ISOLATED_TEST_ON_CURRENT
             php-version: "8.0"
           # These are our custom jobs to ensure composer install works
           - orca-job: ""
