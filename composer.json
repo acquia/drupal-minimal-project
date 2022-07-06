@@ -22,7 +22,8 @@
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "drupal/core-composer-scaffold": true
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
         },
         "platform": {
             "php": "7.4"
