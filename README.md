@@ -1,5 +1,10 @@
-Acquia Drupal Minimal Project
+Acquia Drupal Minimal Project is EOL
 ====
+
+Use [Acquia Drupal Recommended Project](https://github.com/acquia/drupal-recommended-project) instead; it is now functionally identical. For more information see https://github.com/acquia/drupal-recommended-project/issues/157.
+
+Original description
+===
 
 This project template provides a minimal Drupal 9 application to be hosted on Acquia. It includes only essential dependencies and configuration to install and host Drupal 9 on Acquia. It is based on the [Drupal Recommended Project](https://github.com/drupal/recommended-project/tree/9.3.x), with only a few modifications:
 
